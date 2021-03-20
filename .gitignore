@@ -1,5 +1,6 @@
 // FOLDERS
 node_modules
+build
 
 // FILES
 package.json
