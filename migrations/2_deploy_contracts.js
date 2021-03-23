@@ -1,7 +1,7 @@
 const ABCToken = artifacts.require("ABCToken");
 const cABCToken = artifacts.require("cABCToken");
 
-module.exports = function (deployer) {
+module.exports = async function (deployer) {
     // Deploy ABCToken
     await deployer.deploy(ABCToken);
     // Get deployed instance
@@ -9,5 +9,5 @@ module.exports = function (deployer) {
 
     // Deploy cABCToken
     await deployer.deploy(cABCToken, abcToken.address);
-    let cabcToken = cABCToken.deployed();
+    let cabcToken = await cABCToken.deployed();
 };
